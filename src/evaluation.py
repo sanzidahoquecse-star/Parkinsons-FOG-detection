@@ -667,3 +667,17 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+# ==================================================
+# Additional Evaluation Metric: Balanced Accuracy
+# ==================================================
+
+def calculate_balanced_accuracy(y_true, y_pred):
+    """
+    Calculate balanced accuracy for imbalanced FoG data.
+    """
+    from sklearn.metrics import balanced_accuracy_score
+
+    score = balanced_accuracy_score(y_true, y_pred)
+    return score
+
